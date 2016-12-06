@@ -2,7 +2,10 @@ cmake_minimum_required(VERSION 2.8)
 
 project(color_coded)
 
-option(DOWNLOAD_CLANG "Download pre-built clang+llvm" TRUE)
+## Install  in Ubuntu, which has clang\llvm3.9.0, g++4.9, gcc4.9 installed. Mustn't to download pre-build clang.
+## if TRUE: Download by Browser from: http://llvm.org/releases/ , according to your OS, such as Ubuntu and Edition, 3.9
+# option(DOWNLOAD_CLANG "Download pre-built clang+llvm" TRUE)
+option(DOWNLOAD_CLANG "Download pre-built clang+llvm" FALSE)
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE RELEASE)
